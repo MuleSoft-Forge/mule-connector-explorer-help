@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCE External Help</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            border-bottom: 3px solid #00a0df;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #00a0df;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        h2 {
+            color: #0070d2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h3 {
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .issue-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .info-box {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .critical-box {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .status-investigating {
+            background: #ffc107;
+            color: #000;
+        }
+        
+        .status-fixed {
+            background: #28a745;
+            color: white;
+        }
+        
+        .status-critical {
+            background: #dc3545;
+            color: white;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        strong {
+            color: #0070d2;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e83e8c;
+        }
+        
+        .tip {
+            background: #e7f3ff;
+            border-left: 4px solid #0070d2;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid white;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 MuleSoft Connector Explorer Help</h1>
+            <p class="last-updated">Last Updated: November 3, 2024 at 2:30 PM</p>
+        </div>
+
+        <!-- CRITICAL ISSUES SECTION -->
+        <div class="section">
+            <h2>🚨 Critical Issues</h2>
+            <div class="critical-box">
+                <strong>🔴 URGENT: Service Outage</strong>
+                <p><strong>Status:</strong> <span class="status status-critical">Active</span></p>
+                <p><strong>Impact:</strong> All IDP operations are currently unavailable</p>
+                <p><strong>ETA:</strong> Resolution expected by 5:00 PM EST</p>
+                <p><strong>Workaround:</strong> Please wait for service restoration. Updates posted here.</p>
+            </div>
+        </div>
+
+        <!-- KNOWN ISSUES SECTION -->
+        <div class="section">
+            <h2>⚠️ Known Issues</h2>
+            
+            <h3>IDP Connector Timeout</h3>
+            <div class="issue-box">
+                <p><strong>Status:</strong> <span class="status status-investigating">Investigating</span></p>
+                <p><strong>Description:</strong> Connection timeouts when processing large PDF files (>5MB)</p>
+                <p><strong>Workaround:</strong> Increase timeout in runtime configuration to 120 seconds</p>
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Go to Admin → Runtime Configs</li>
+                    <li>Edit your IDP config</li>
+                    <li>Add parameter: <code>timeout = 120000</code></li>
+                    <li>Save and retry</li>
+                </ol>
+            </div>
+
+            <h3>Agentforce Chat Latency</h3>
+            <div class="success-box">
+                <p><strong>Status:</strong> <span class="status status-fixed">Fixed</span></p>
+                <p><strong>Description:</strong> Slow response times in chat operations (5-10 second delays)</p>
+                <p><strong>Resolution:</strong> Fixed in connector version 2.1.0</p>
+                <p><strong>Action Required:</strong> Update your Agentforce connector from Exchange</p>
+            </div>
+
+            <h3>MCP Server Connection Reset</h3>
+            <div class="issue-box">
+                <p><strong>Status:</strong> <span class="status status-investigating">Investigating</span></p>
+                <p><strong>Description:</strong> Intermittent "Connection reset by peer" errors</p>
+                <p><strong>Workaround:</strong> Implement retry logic with exponential backoff</p>
+                <p><strong>Code Example:</strong></p>
+                <code>maxRetries = 3, retryDelay = 2000</code>
+            </div>
+        </div>
+
+        <!-- QUICK TIPS SECTION -->
+        <div class="section">
+            <h2>💡 Quick Tips & Updates</h2>
+            
+            <div class="tip">
+                <p><strong>NEW:</strong> MCE Flows page now includes updated flow diagrams for all connectors! Check it out from the top menu.</p>
+            </div>
+
+            <ul>
+                <li><strong>Property Placeholders:</strong> Use <code>#[p('property.name')]</code> syntax for secure credential storage</li>
+                <li><strong>Runtime Config Dropdown:</strong> Now shows connector type and last modified date for easier identification</li>
+                <li><strong>JSON Formatting:</strong> Click "Format JSON" buttons in textareas to auto-format JSON payloads</li>
+                <li><strong>Copy Response IDs:</strong> Use browser DevTools or copy directly from response panels</li>
+                <li><strong>Lab Auto-Save:</strong> Your parameter values are saved locally - refresh without losing work!</li>
+            </ul>
+        </div>
+
+        <!-- BEST PRACTICES SECTION -->
+        <div class="section">
+            <h2>✅ Best Practices</h2>
+            
+            <h3>Runtime Configuration Management</h3>
+            <div class="info-box">
+                <ul>
+                    <li>Create separate configs for dev, test, and prod environments</li>
+                    <li>Use descriptive names: "OpenAI-Production-GPT4" vs "Config1"</li>
+                    <li>Never hardcode API keys - use property placeholders</li>
+                    <li>Test configs in Lab before using in production flows</li>
+                </ul>
+            </div>
+
+            <h3>Testing Operations</h3>
+            <ul>
+                <li>Start with simple operations to verify connectivity</li>
+                <li>Use the "Show" button on configs to verify all parameters</li>
+                <li>Check response times - slow responses may indicate config issues</li>
+                <li>Save successful parameter combinations for reuse</li>
+            </ul>
+        </div>
+
+        <!-- COMMON ERRORS SECTION -->
+        <div class="section">
+            <h2>🔍 Common Error Solutions</h2>
+            
+            <h3>"401 Unauthorized" Error</h3>
+            <div class="issue-box">
+                <p><strong>Cause:</strong> Invalid or expired API key</p>
+                <p><strong>Solution:</strong></p>
+                <ol>
+                    <li>Verify API key in your provider's dashboard</li>
+                    <li>Check for extra spaces or hidden characters</li>
+                    <li>Regenerate key if expired</li>
+                    <li>Update runtime configuration with new key</li>
+                </ol>
+            </div>
+
+            <h3>"Execution ID not found"</h3>
+            <div class="issue-box">
+                <p><strong>Cause:</strong> IDP execution not complete or incorrect ID</p>
+                <p><strong>Solution:</strong></p>
+                <ul>
+                    <li>Wait 5-10 seconds after submission before retrieving results</li>
+                    <li>Double-check you copied the full <code>executionId</code> from response</li>
+                    <li>Use "Get Execution Status" to check if processing is complete</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RELEASE NOTES SECTION -->
+        <div class="section">
+            <h2>📋 Recent Updates</h2>
+            
+            <h3>November 3, 2024</h3>
+            <ul>
+                <li>Added External Help Files feature - you're reading it now! 🎉</li>
+                <li>Fixed navigation breadcrumb on Lab pages</li>
+                <li>Improved runtime config dropdown performance</li>
+            </ul>
+
+            <h3>October 28, 2024</h3>
+            <ul>
+                <li>Added MCE Flows page with technical documentation</li>
+                <li>Enhanced IDP Lab with 2-column layout for Platform operations</li>
+                <li>Added visual indicators for required fields</li>
+            </ul>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div class="contact">
+            <h2 style="color: white;">📞 Need More Help?</h2>
+            <p>Can't find what you're looking for? Our team is here to help!</p>
+            <p style="margin-top: 15px;">
+                <strong>Email:</strong> <a href="mailto:support@yourcompany.com">support@yourcompany.com</a><br>
+                <strong>Documentation:</strong> <a href="https://docs.mulesoft.com" target="_blank">docs.mulesoft.com</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
